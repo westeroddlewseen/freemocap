@@ -62,7 +62,8 @@ freemocap = "freemocap.__main__:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 # Removed --cov flags so tests run faster during local development without coverage overhead
-addopts = "-v"
+# -p no:warnings added to suppress noisy deprecation warnings while exploring the codebase
+addopts = "-v -p no:warnings"
 
 [tool.black]
 line-length = 120
