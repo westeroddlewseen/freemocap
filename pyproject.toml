@@ -61,7 +61,8 @@ freemocap = "freemocap.__main__:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=freemocap --cov-report=term-missing"
+# Removed --cov flags so tests run faster during local development without coverage overhead
+addopts = "-v"
 
 [tool.black]
 line-length = 120
